@@ -1,0 +1,11 @@
+{
+  "name": "dinoworld",
+  "version": "1.0.0",
+  "description": "Enciclopedia de dinosaurios con la API de DinoFYI",
+  "scripts": {
+    "sass": "sass scss/main.scss css/main.css --style=compressed --no-source-map",
+    "sass:watch": "sass --watch scss/main.scss:css/main.css",
+    "start": "npx serve ."
+  },
+  "devDependencies": { "sass": "^1.80.0" }
+}

@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+.site-header {
+  border-bottom: 1px solid $line;
+  .bar { width: min(100% - 2rem, 76rem); margin-inline: auto; display: flex; flex-wrap: wrap; gap: .5rem 2rem; align-items: center; justify-content: space-between; padding-block: 1.1rem; }
+  .brand { font-weight: 800; font-size: 1.5rem; color: $mint; text-decoration: none; }
+  ul { display: flex; gap: 1.75rem; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+  a:not(.brand) { color: $text; text-decoration: none; font-size: .95rem; padding-block: .25rem; border-bottom: 2px solid transparent;
+    &:hover, &[aria-current='page'] { color: $mint; border-color: $mint; } }
+}
+.site-footer { border-top: 1px solid $line; padding: 1.5rem 1rem; text-align: center; font-size: .9rem; color: $muted; p { margin: 0 auto; } }
+
+.hero {
+  display: grid; gap: 2.5rem; align-items: center; padding-block: 2rem 3rem;
+  @include up($bp-lg) { grid-template-columns: 1fr 1.1fr; }
+  .lead { font-size: 1.15rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+}
+.hero__media {
+  position: relative; isolation: isolate; margin: 0;
+  &::before { content: ''; position: absolute; inset: -1rem -1rem 1rem 1.5rem; border: 6px solid $violet; border-radius: 2.5rem; z-index: -1;
+    box-shadow: 0 0 60px rgba($violet, .45); }
+  img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 2rem; background: $surface; }
+  .dot { position: absolute; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: rgba($bg, .8); border: 2px solid $mint; box-shadow: 0 0 14px rgba($mint, .6); }
+  .dot--1 { top: 22%; left: 30%; } .dot--2 { top: 14%; left: 62%; } .dot--3 { top: 36%; left: 82%; }
+}
+.stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; padding: 0; list-style: none;
+  strong { display: block; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; }
+  span { color: $muted; font-size: .85rem; }
+}
+.grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); list-style: none; padding: 0; margin: 0; }
+.grid--single { grid-template-columns: 1fr; }
+.split { display: grid; gap: 2rem; @include up($bp-lg) { grid-template-columns: 2fr 1fr; } }
+.section { margin-top: 3rem; }

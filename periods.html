@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DinoWorld: enciclopedia digital de dinosaurios con datos de DinoFYI.">
+  <title>Épocas prehistóricas · DinoWorld</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="visually-hidden" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html">DinoWorld</a>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="explorer.html">Explorador</a></li>
+          <li><a href="periods.html" aria-current="page">Épocas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <h1>Épocas prehistóricas</h1>
+    <p class="lead">Los dinosaurios dominaron la Tierra durante unos 165 millones de años, en la era Mesozoica.</p>
+    <ul class="chips" aria-label="Ir a una época">
+      <li><a href="#triasico">Triásico</a></li>
+      <li><a href="#jurasico">Jurásico</a></li>
+      <li><a href="#cretacico">Cretácico</a></li>
+    </ul>
+    <section class="era" id="triasico" data-era="triassic" aria-labelledby="t-triasico">
+      <div class="era__head"><h2 id="t-triasico">Triásico</h2><p class="ma">252 – 201 millones de años</p>
+        <p>Clima cálido y árido en el interior de Pangea. Aparecen los primeros dinosaurios, aún pequeños y ágiles.</p></div>
+      <div class="era__status"></div><ul class="grid"></ul>
+    </section>
+    <section class="era era--jurassic" id="jurasico" data-era="jurassic" aria-labelledby="t-jurasico">
+      <div class="era__head"><h2 id="t-jurasico">Jurásico</h2><p class="ma">201 – 145 millones de años</p>
+        <p>Pangea se divide y el clima se vuelve húmedo. Dominan los gigantes herbívoros y sus depredadores.</p></div>
+      <div class="era__status"></div><ul class="grid"></ul>
+    </section>
+    <section class="era era--cretaceous" id="cretacico" data-era="cretaceous" aria-labelledby="t-cretacico">
+      <div class="era__head"><h2 id="t-cretacico">Cretácico</h2><p class="ma">145 – 66 millones de años</p>
+        <p>Surgen las plantas con flores y aparecen los dinosaurios más famosos. Termina con el impacto de Chicxulub.</p></div>
+      <div class="era__status"></div><ul class="grid"></ul>
+    </section>
+    <section class="section" aria-labelledby="api-periods"><h2 id="api-periods">Períodos geológicos según la API</h2><div id="periods"></div></section>
+  </main>
+  <footer class="site-footer">
+    <p>Actividad Práctica 24 Datos: <a href="https://dinofyi.com/developers/">DinoFYI API</a> · Proyecto del módulo AJAX y APIs</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.7.9/dist/axios.min.js"></script>
+    <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/periods.js"></script>
+</body>
+</html>

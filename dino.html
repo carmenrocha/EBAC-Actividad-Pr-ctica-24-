@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DinoWorld: enciclopedia digital de dinosaurios con datos de DinoFYI.">
+  <title>Ficha · DinoWorld</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="visually-hidden" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html">DinoWorld</a>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="explorer.html" aria-current="page">Explorador</a></li>
+          <li><a href="periods.html">Épocas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <article id="ficha" aria-live="polite"></article>
+  </main>
+  <footer class="site-footer">
+    <p>Actividad Práctica 24 Datos: <a href="https://dinofyi.com/developers/">DinoFYI API</a> · Proyecto del módulo AJAX y APIs</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.7.9/dist/axios.min.js"></script>
+    <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/dino.js"></script>
+</body>
+</html>

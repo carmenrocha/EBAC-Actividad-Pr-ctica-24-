@@ -1,0 +1,16 @@
+$bg: #0a0b10;
+$surface: #12141c;
+$surface-2: #1a1d29;
+$line: #262a3a;
+$text: #f3f5fa;
+$muted: #8b92a8;
+$mint: #3ef0c0;
+$violet: #5b2cff;
+$violet-soft: #7a52ff;
+
+$font: 'Urbanist', system-ui, sans-serif;
+$bp-md: 48rem;
+$bp-lg: 70rem;
+$radius: 1rem;
+
+@mixin up($bp) { @media (min-width: $bp) { @content; } }

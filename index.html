@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DinoWorld: enciclopedia digital de dinosaurios con datos de DinoFYI.">
+  <title>DinoWorld · Enciclopedia de dinosaurios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="visually-hidden" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html">DinoWorld</a>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="explorer.html">Explorador</a></li>
+          <li><a href="periods.html">Épocas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="hero" aria-labelledby="titulo">
+      <div>
+        <h1 id="titulo">Explora las criaturas más antiguas.</h1>
+        <p class="lead">Descubre especies, consulta su clasificación y recorre las épocas en que los dinosaurios dominaron la Tierra.</p>
+        <div class="actions">
+          <a class="btn" href="#buscador">Buscar dinosaurios</a>
+          <a class="btn btn--ghost" href="periods.html">Ver épocas</a>
+        </div>
+        <ul class="stats" aria-label="Datos del catálogo">
+          <li><strong id="stat-total">6.000+</strong><span>especies</span></li>
+          <li><strong id="stat-periods">15</strong><span>períodos geológicos</span></li>
+          <li><strong>165 M</strong><span>años de dominio</span></li>
+        </ul>
+      </div>
+      <figure class="hero__media">
+        <img src="img/tyrannosaurus-rex-wild.jpg" alt="Tyrannosaurus rex en primer plano" width="800" height="600">
+        <div class="hotspot hotspot--1 hotspot--left">
+          <button class="hotspot__btn" type="button" aria-expanded="false" aria-controls="tip-1" aria-label="Mordida de récord: más información">1</button>
+          <div class="hotspot__tip" id="tip-1"><strong>Mordida de récord</strong><p>Su mordida se estima en más de 35.000 newtons, suficiente para triturar hueso. Sus dientes llegaban a unos 30 cm contando la raíz.</p></div>
+        </div>
+        <div class="hotspot hotspot--2">
+          <button class="hotspot__btn" type="button" aria-expanded="false" aria-controls="tip-2" aria-label="Sentidos afilados: más información">2</button>
+          <div class="hotspot__tip" id="tip-2"><strong>Sentidos afilados</strong><p>Tenía grandes bulbos olfativos y ojos orientados hacia delante, con visión binocular para calcular distancias.</p></div>
+        </div>
+        <div class="hotspot hotspot--3 hotspot--right">
+          <button class="hotspot__btn" type="button" aria-expanded="false" aria-controls="tip-3" aria-label="Brazos diminutos: más información">3</button>
+          <div class="hotspot__tip" id="tip-3"><strong>Brazos diminutos</strong><p>Medían cerca de 1 m, con dos dedos y garras, y eran más musculosos de lo que parecen.</p></div>
+        </div>
+        <p class="hero__hint" aria-hidden="true">Toca los puntos para descubrir más</p>
+        <figcaption class="visually-hidden">Tyrannosaurus rex</figcaption>
+      </figure>
+    </section>
+    <section class="section" id="buscador" aria-labelledby="buscar">
+      <h2 id="buscar">Los dinosaurios más conocidos</h2>
+      <form class="search" id="search-form" role="search">
+        <label class="visually-hidden" for="q">Buscar dinosaurio</label>
+        <input id="q" type="search" placeholder="Busca por nombre: raptor, rex, saurus…">
+        <button class="btn" type="submit">Buscar</button>
+      </form>
+      <div id="status" aria-live="polite"></div>
+      <ul class="grid" id="results"></ul>
+      <p><button class="btn btn--ghost" id="more" type="button" hidden>Cargar más</button></p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>Actividad Práctica 24 Datos: <a href="https://dinofyi.com/developers/">DinoFYI API</a> · Proyecto del módulo AJAX y APIs</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.7.9/dist/axios.min.js"></script>
+    <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/hotspots.js"></script>
+  <script src="js/explorer.js"></script>
+</body>
+</html>
